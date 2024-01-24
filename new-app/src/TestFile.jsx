@@ -15,17 +15,17 @@ function TestFile() {
     setPeople((prevPeople) => prevPeople.filter((person) => person.id !== id));
   }
 
-  const btnStyles = {
-    backgroundColor: "black",
-    color: "yellow",
-    border: "none",
-    padding: "5px 10px",
-    fontSize: "15px",
-  };
+  // const btnStyles = {
+  //   backgroundColor: "black",
+  //   color: "yellow",
+  //   border: "none",
+  //   padding: "5px 10px",
+  //   fontSize: "15px",
+  // };
 
   return (
     <React.Fragment>
-      <section className="countContainer">
+      {/* <section className="countContainer">
         <h3>Count example</h3>
         <h2>{count}</h2>
         <div className="btns">
@@ -54,7 +54,7 @@ function TestFile() {
         <button style={btnStyles} type="button" onClick={() => setPeople([])}>
           clear
         </button>
-      </section>
+      </section> */}
     </React.Fragment>
   );
 }
