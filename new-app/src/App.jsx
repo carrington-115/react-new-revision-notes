@@ -3,6 +3,7 @@ import "./App.css";
 import BookPurchasingForm from "./components/BookPurchasingForm";
 import BookList from "./components/BookList";
 import TestFile from "./TestFile";
+import ChallengeFile from "./GithubFetchChallenge";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       <section className="form-container">
         <BookPurchasingForm />
       </section> */}
-      <TestFile />
+      {/* <TestFile /> */}
+      <ChallengeFile />
     </div>
   );
 }

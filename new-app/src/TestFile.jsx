@@ -1,5 +1,5 @@
 import "./assets/styles/testfile.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const peopleCollection = [
   { id: 1, people: "Fru", nickname: "Fru-Mark" },
@@ -23,9 +23,13 @@ function TestFile() {
   //   fontSize: "15px",
   // };
 
+  useEffect(() => {
+    console.log("hello there"); // run after every re-render
+  });
+
   return (
     <React.Fragment>
-      {/* <section className="countContainer">
+      <section className="countContainer">
         <h3>Count example</h3>
         <h2>{count}</h2>
         <div className="btns">
@@ -34,7 +38,7 @@ function TestFile() {
         </div>
       </section>
 
-      <section>
+      {/*<section>
         <p>Displaying people</p>
         <div>
           {people.map((person) => (
@@ -55,6 +59,8 @@ function TestFile() {
           clear
         </button>
       </section> */}
+
+      <section></section>
     </React.Fragment>
   );
 }
