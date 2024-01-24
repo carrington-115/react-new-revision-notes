@@ -2,10 +2,12 @@ import Book from "./Book";
 import { booksCollection } from "../data/books";
 
 function BookList() {
-  const getBooks = (title) => {
-    const theBook = booksCollection.find((book) => book.title === title);
+  const getBooks = (id) => {
+    const theBook = booksCollection.find((book) => book.id === id);
     console.log(theBook);
   };
+
+  console.log(booksCollection);
 
   return (
     <div className="book-list-section">
@@ -13,17 +15,17 @@ function BookList() {
       <section className="book-list-container">
         {booksCollection.map((item, index) => (
           <Book
-            handleBookClick={handleBookClick}
-            key={index}
             bookUrl={item.bookUrl}
+            key={item.id}
             image={item.image}
             title={item.title}
             author={item.author}
             getBooks={getBooks}
+            number={index}
           />
         ))}
         {booksCollection.map((book, index) => (
-          <Book {...book} key={index} getBooks={getBooks} />
+          <Book {...book} getBooks={getBooks} key={book.id} number={index} />
         ))}
       </section>
     </div>
