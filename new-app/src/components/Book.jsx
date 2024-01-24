@@ -1,8 +1,12 @@
 import "../assets/styles/book.css";
 
 function Book({ bookUrl, image, title, author }) {
+  function handleBookClick() {
+    alert(`Book name: ${title}, by ${author}; link: ${bookUrl}`);
+  }
+
   return (
-    <a href={bookUrl} className="book-container">
+    <a onClick={handleBookClick} href="" className="book-container">
       <img
         src={image}
         id="book-cover-image"

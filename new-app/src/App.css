@@ -33,3 +33,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
+
+.form-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
