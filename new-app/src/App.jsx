@@ -40,24 +40,9 @@ function BookList() {
             author={item.author}
           />
         ))}
-        <Book
-          bookUrl="#"
-          image={image1}
-          title="Atomic Habits"
-          author="James Clear"
-        />
-        <Book
-          bookUrl="#"
-          image={image2}
-          title="Atomic Habits"
-          author="James Clear"
-        />
-        <Book
-          bookUrl="#"
-          image={image3}
-          title="Atomic Habits"
-          author="James Clear"
-        />
+        {booksCollection.map((book, index) => (
+          <Book {...book} key={index} />
+        ))}
       </section>
     </div>
   );
