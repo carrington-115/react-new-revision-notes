@@ -10,7 +10,9 @@ function Book({ bookUrl, image, title, author, handleBookClick, getBooks }) {
       />
       <h3 className="book-title">{title}</h3>
       <p className="book-author">{author}</p>
-      <button onClick={() => getBooks(title)}>Get the book</button>
+      <button className="book-btn" onClick={() => getBooks(title)}>
+        Get the book
+      </button>
     </a>
   );
 }

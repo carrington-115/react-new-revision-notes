@@ -20,6 +20,22 @@
 }
 
 .book-container .book-title {
-  font-size: 24px;
+  font-size: 20px;
   margin-top: 5px;
+}
+
+.book-btn {
+  background-color: yellow;
+  color: black;
+  border: none;
+  border-radius: 10px;
+  font-size: 24px;
+  padding: 8px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.book-btn:hover {
+  background-color: black;
+  color: yellow;
 }
