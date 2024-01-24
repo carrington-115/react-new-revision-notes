@@ -29,8 +29,14 @@ const booksCollection = [
 
 function BookList() {
   function handleBookClick(title, author, bookUrl) {
-    alert(`Book name: ${title}, by ${author}; link: ${bookUrl}`);
+    // alert(`Book name: ${title}, by ${author}; link: ${bookUrl}`);
   }
+
+  const getBooks = (title) => {
+    const theBook = booksCollection.find((book) => book.title === title);
+    console.log(theBook);
+  };
+
   return (
     <div className="book-list-section">
       <h3 className="best-selling-title">Top 3 Best selling Books of 2023</h3>
@@ -43,15 +49,26 @@ function BookList() {
             image={item.image}
             title={item.title}
             author={item.author}
+            getBooks={getBooks}
           />
         ))}
         {booksCollection.map((book, index) => (
-          <Book {...book} key={index} />
+          <Book {...book} key={index} getBooks={getBooks} />
         ))}
       </section>
     </div>
   );
 }
+
+// function SearchBook() {
+//   return (
+//     <section className="search-book">
+//       <div className="search-section">
+
+//       </div>
+//     </section>
+//   )
+// }
 
 function App() {
   return (
