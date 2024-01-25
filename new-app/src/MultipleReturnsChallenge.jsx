@@ -11,13 +11,15 @@ function MultipleReturnsChallenge() {
   async function fetchMyData() {
     try {
       const response = await fetch(url);
+      if (!response.ok) {
+        setError(false);
+        setLoading(false);
+      }
       const userInfo = await response.json();
       setUserData(userInfo);
     } catch (error) {
       console.log(error);
-      if (error) {
-        setError(error);
-      }
+      setError(true);
     }
   }
 
@@ -36,7 +38,7 @@ function MultipleReturnsChallenge() {
       <section
         style={{ color: "white", backgroundColor: "black", fontSize: "18px" }}
       >
-        <p>{error}</p>
+        <p>There was an error</p>
       </section>
     );
   }
