@@ -1,40 +1,39 @@
 import { useEffect, useState } from "react";
+const inputStyle = {
+  fontSize: "20px",
+  padding: "5px 10px",
+  border: "none",
+  outline: "none",
+  width: "100%",
+  color: "black",
+  backgroundColor: "white",
+};
+const btnStyle = {
+  width: "100%",
+  fontSize: "15px",
+  color: "white",
+  backgroundColor: "#7e0363",
+  border: "none",
+  padding: "5px 0px",
+  cursor: "pointer",
+};
+const formStyle = {
+  display: "flex",
+  flexDirection: "column",
+  gap: "15px",
+  marginTop: "15px",
+  width: "30vw",
+  padding: "20px",
+  backgroundColor: "#030103",
+};
+
+const labelStyle = {
+  fontSize: "15px",
+  color: "black",
+  color: "white",
+};
 
 function UsingForms() {
-  const inputStyle = {
-    fontSize: "20px",
-    padding: "5px 10px",
-    border: "none",
-    outline: "none",
-    width: "100%",
-    color: "black",
-    backgroundColor: "white",
-  };
-  const btnStyle = {
-    width: "100%",
-    fontSize: "15px",
-    color: "white",
-    backgroundColor: "#7e0363",
-    border: "none",
-    padding: "5px 0px",
-    cursor: "pointer",
-  };
-  const formStyle = {
-    display: "flex",
-    flexDirection: "column",
-    gap: "15px",
-    marginTop: "15px",
-    width: "30vw",
-    padding: "20px",
-    backgroundColor: "#030103",
-  };
-
-  const labelStyle = {
-    fontSize: "15px",
-    color: "black",
-    color: "white",
-  };
-
   //   const [name, setName] = useState("");
   //   const [email, setEmail] = useState("");
   //   const [password, setPassword] = useState("");
@@ -148,3 +147,5 @@ function UsingForms() {
   );
 }
 export default UsingForms;
+
+export { labelStyle, inputStyle, formStyle, btnStyle };

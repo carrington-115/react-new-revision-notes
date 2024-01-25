@@ -6,6 +6,7 @@ import TestFile from "./TestFile";
 import ChallengeFile from "./GithubFetchChallenge";
 import MultipleReturnsChallenge from "./MultipleReturnsChallenge";
 import UsingForms from "./components/UsingForms";
+import FormsWithFormDataAPI from "./components/FormsWithFormDataAPI";
 
 function App() {
   return (
@@ -25,7 +26,8 @@ function App() {
       <TestFile />
       {/* <ChallengeFile /> */}
       {/* <MultipleReturnsChallenge /> */}
-      <UsingForms />
+      {/* <UsingForms /> */}
+      <FormsWithFormDataAPI />
     </div>
   );
 }
