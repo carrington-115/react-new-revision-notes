@@ -5,12 +5,18 @@ import BookList from "./components/BookList";
 import TestFile from "./TestFile";
 import ChallengeFile from "./GithubFetchChallenge";
 import MultipleReturnsChallenge from "./MultipleReturnsChallenge";
+import UsingForms from "./components/UsingForms";
 
 function App() {
   return (
     <div
       className="App"
-      style={{ width: "100%", display: "flex", justifyContent: "center" }}
+      style={{
+        width: "100%",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+      }}
     >
       {/* <BookList />
       <section className="form-container">
@@ -19,6 +25,7 @@ function App() {
       <TestFile />
       {/* <ChallengeFile /> */}
       {/* <MultipleReturnsChallenge /> */}
+      <UsingForms />
     </div>
   );
 }

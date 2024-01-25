@@ -19,11 +19,11 @@ function TestFile() {
     <React.Fragment>
       <section>
         <Counter count={count} setCount={setCount} />
-        <div>
+        {/* <div>
           {peopleCollectionTwo.map((person) => (
-            <DisplayPerson {...person} />
+            <DisplayPerson key={person.id} {...person} />
           ))}
-        </div>
+        </div> */}
         {/*<section>
         <p>Displaying people</p>
         <div>
