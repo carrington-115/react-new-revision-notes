@@ -6,6 +6,7 @@ const url = "https://api.github.com/users/carrington-115";
 function MultipleReturnsChallenge() {
   const [loading, setLoading] = useState(true);
   const [userData, setUserData] = useState([]);
+  const [error, setError] = useState(false);
 
   async function fetchMyData() {
     try {
@@ -14,6 +15,9 @@ function MultipleReturnsChallenge() {
       setUserData(userInfo);
     } catch (error) {
       console.log(error);
+      if (error) {
+        setError(error);
+      }
     }
   }
 
@@ -27,6 +31,14 @@ function MultipleReturnsChallenge() {
 
   if (loading) {
     return <SidEffectLoading />;
+  } else if (error) {
+    return (
+      <section
+        style={{ color: "white", backgroundColor: "black", fontSize: "18px" }}
+      >
+        <p>{error}</p>
+      </section>
+    );
   }
   return (
     <React.Fragment>
