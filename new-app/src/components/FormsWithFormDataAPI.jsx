@@ -9,6 +9,7 @@ function FormsWithFormDataAPI() {
 
   const handleSubmitFormData = (e) => {
     e.preventDefault();
+    console.log(e);
     const formAccess = new FormData(e.currentTarget);
     console.log(formAccess.get("name"));
     const getName = formAccess.get("name");
@@ -16,6 +17,7 @@ function FormsWithFormDataAPI() {
     console.log(getName, getEmail);
     console.log([...formAccess.entries()]);
     console.log(Object.fromEntries(formAccess)); // this turn the array of array to key-value object
+    e.currentTarget.reset();
   };
 
   return (
