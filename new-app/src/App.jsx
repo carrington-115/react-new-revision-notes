@@ -16,9 +16,9 @@ function App() {
       <section className="form-container">
         <BookPurchasingForm />
       </section> */}
-      {/* <TestFile /> */}
+      <TestFile />
       {/* <ChallengeFile /> */}
-      <MultipleReturnsChallenge />
+      {/* <MultipleReturnsChallenge /> */}
     </div>
   );
 }

@@ -1,11 +1,6 @@
 import "./assets/styles/testfile.css";
 import React, { useState, useEffect } from "react";
-
-const peopleCollection = [
-  { id: 1, people: "Fru", nickname: "Fru-Mark" },
-  { id: 2, people: "Fru", nickname: "Fru-Mark" },
-  { id: 3, people: "Fru", nickname: "Fru-Mark" },
-];
+import { peopleCollection } from "./data/people";
 
 function TestFile() {
   // console.log(useState(0)); // --> testing the useState hook
@@ -14,15 +9,6 @@ function TestFile() {
   function removePerson(id) {
     setPeople((prevPeople) => prevPeople.filter((person) => person.id !== id));
   }
-
-  // const btnStyles = {
-  //   backgroundColor: "black",
-  //   color: "yellow",
-  //   border: "none",
-  //   padding: "5px 10px",
-  //   fontSize: "15px",
-  // };
-
   useEffect(() => {
     console.log("hello there"); // run after every re-render
   });
@@ -64,4 +50,17 @@ function TestFile() {
     </React.Fragment>
   );
 }
+
+const SidEffectLoading = () => {
+  return (
+    <section>
+      <div className="circle"></div>
+      <div className="circle">
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+  );
+};
+
 export default TestFile;
