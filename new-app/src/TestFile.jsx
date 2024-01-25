@@ -1,6 +1,8 @@
+import { Counter } from "./components/Counter";
+import { DisplayPerson } from "./components/DisplayPerson";
 import "./assets/styles/testfile.css";
 import React, { useState, useEffect } from "react";
-import { peopleCollection } from "./data/people";
+import { peopleCollection, peopleCollectionTwo } from "./data/people";
 
 function TestFile() {
   // console.log(useState(0)); // --> testing the useState hook
@@ -15,16 +17,14 @@ function TestFile() {
 
   return (
     <React.Fragment>
-      <section className="countContainer">
-        <h3>Count example</h3>
-        <h2>{count}</h2>
-        <div className="btns">
-          <button onClick={() => setCount(count + 1)}>+</button>
-          <button onClick={() => setCount(count - 1)}>-</button>
+      <section>
+        <Counter count={count} setCount={setCount} />
+        <div>
+          {peopleCollectionTwo.map((person) => (
+            <DisplayPerson {...person} />
+          ))}
         </div>
-      </section>
-
-      {/*<section>
+        {/*<section>
         <p>Displaying people</p>
         <div>
           {people.map((person) => (
@@ -45,8 +45,7 @@ function TestFile() {
           clear
         </button>
       </section> */}
-
-      <section></section>
+      </section>
     </React.Fragment>
   );
 }
