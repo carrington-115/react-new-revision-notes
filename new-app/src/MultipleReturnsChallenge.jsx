@@ -8,10 +8,13 @@ function MultipleReturnsChallenge() {
   const [userData, setUserData] = useState([]);
 
   async function fetchMyData() {
-    const response = await fetch(url);
-    const userInfo = await response.json();
-    setUserData(userInfo);
-    console.log(userData);
+    try {
+      const response = await fetch(url);
+      const userInfo = await response.json();
+      setUserData(userInfo);
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   useEffect(() => {
