@@ -1,0 +1,55 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.loading-skeleton {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.loading-skeleton .heading {
+  width: 60%;
+  height: 45px;
+  border-radius: 20px;
+  background-color: rgb(226, 225, 225);
+}
+
+.loading-skeleton .image {
+  width: 80%;
+  height: 50vh;
+  border-radius: 30px;
+  background-color: rgb(226, 225, 225);
+}
+
+.loading-skeleton .circle {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+.loading-skeleton .circle .user-name,
+.user-profession,
+.other-info {
+  width: 50%;
+  height: 40px;
+  background-color: rgb(226, 225, 225);
+  border-radius: 20px;
+}
+.loading-skeleton .circle .user-profession {
+  width: 70%;
+  height: 20px;
+}
+.loading-skeleton .circle .other-info {
+  width: 85%;
+  height: 20px;
+}

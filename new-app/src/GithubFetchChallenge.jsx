@@ -22,6 +22,7 @@ function ChallengeFile() {
   return (
     <React.Fragment>
       <section className="users-container">
+        <h2 style={{ textDecoration: "underline" }}>Github Users </h2>
         {users.map((user) => (
           <DisplayGitHubUser
             key={user.id}
