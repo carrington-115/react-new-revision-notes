@@ -8,6 +8,7 @@ import MultipleReturnsChallenge from "./MultipleReturnsChallenge";
 import UsingForms from "./components/UsingForms";
 import FormsWithFormDataAPI from "./components/FormsWithFormDataAPI";
 import ComponenWithUseRef from "./components/ComponenWithUseRef";
+import NavBar from "./components/NavBar";
 
 function App() {
   return (
@@ -20,16 +21,17 @@ function App() {
         alignItems: "center",
       }}
     >
+      <NavBar />
       {/* <BookList />
       <section className="form-container">
         <BookPurchasingForm />
       </section> */}
-      <TestFile />
+      {/* <TestFile /> */}
       {/* <ChallengeFile /> */}
-      <MultipleReturnsChallenge />
+      {/* <MultipleReturnsChallenge /> */}
       {/* <UsingForms /> */}
       {/* <FormsWithFormDataAPI /> */}
-      <ComponenWithUseRef />
+      {/* <ComponenWithUseRef /> */}
     </div>
   );
 }
