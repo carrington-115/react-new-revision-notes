@@ -9,8 +9,10 @@ import UsingForms from "./components/UsingForms";
 import FormsWithFormDataAPI from "./components/FormsWithFormDataAPI";
 import ComponenWithUseRef from "./components/ComponenWithUseRef";
 import NavBar from "./components/NavBar";
+import { createContext } from "react";
 
 function App() {
+  console.log(createContext);
   return (
     <div
       className="App"

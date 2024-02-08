@@ -1,41 +1,21 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import "../assets/styles/navbar.css";
+import { navBarContext } from "./NavBar";
 
 function UserContainer() {
-  const [status, setStatus] = useState({ name: "", displayStatus: false });
-  const newName = "Mark";
-
-  const handleOnClick = () => {
-    setStatus((prev) => {
-      return {
-        ...prev,
-        displayStatus: !prev.displayStatus,
-      };
-    });
-    if (status.displayStatus) {
-      setStatus((prev) => {
-        return {
-          ...prev,
-          name: "Mark",
-        };
-      });
-    } else {
-      setStatus((prev) => {
-        return {
-          ...prev,
-          name: "",
-        };
-      });
-    }
-  };
+  const [status, setStatus] = useState(false);
+  const { name } = useContext(navBarContext);
+  console.log(name);
 
   return (
     <div className="user-container-section">
-      <h3 className="user-status">
-        {status.displayStatus && `Hello` + status.name}
-      </h3>
-      <button onClick={handleOnClick} type="button" className="user-status-btn">
-        {status.displayStatus ? "Logout" : "Login"}
+      <h3 className="user-status">{status ? "login" : `Hello ${name}`}</h3>
+      <button
+        onClick={() => setStatus(!status)}
+        type="button"
+        className="user-status-btn"
+      >
+        {status ? "Login" : "Logout"}
       </button>
     </div>
   );

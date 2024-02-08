@@ -12,7 +12,7 @@
 }
 .nav-container .logo {
   width: 20%;
-  color: blue;
+  color: darkblue;
   cursor: pointer;
 }
 
@@ -73,7 +73,11 @@
   font-size: 18px;
 }
 .user-container-section button {
-  background-color: black;
+  background-color: blue;
   cursor: pointer;
   padding: 10px 15px;
+}
+
+.user-container-section button:hover {
+  background-color: darkblue;
 }
