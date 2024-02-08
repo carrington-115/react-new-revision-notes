@@ -1,35 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./assets/styles/loading.css";
+import useFetchUser from "./hooks/useFetchUser";
 
 const url = "https://api.github.com/users/carrington-115";
 
 function MultipleReturnsChallenge() {
-  const [loading, setLoading] = useState(true);
-  const [userData, setUserData] = useState([]);
-  const [error, setError] = useState(false);
-
-  async function fetchMyData() {
-    try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        setError(false);
-        setLoading(false);
-      }
-      const userInfo = await response.json();
-      setUserData(userInfo);
-    } catch (error) {
-      console.log(error);
-      setError(true);
-    }
-  }
-
-  useEffect(() => {
-    fetchMyData();
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 3000);
-  }, []);
+  const { loading, userData, error } = useFetchUser(url);
 
   if (loading) {
     return <SidEffectLoading />;
@@ -41,6 +17,13 @@ function MultipleReturnsChallenge() {
         <p>There was an error</p>
       </section>
     );
+  }
+  if (error) {
+    <>
+      <section>
+        <h1>Data not fetched an error occured</h1>
+      </section>
+    </>;
   }
   return (
     <React.Fragment>

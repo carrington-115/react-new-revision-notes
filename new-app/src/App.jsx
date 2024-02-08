@@ -26,7 +26,7 @@ function App() {
       </section> */}
       <TestFile />
       {/* <ChallengeFile /> */}
-      {/* <MultipleReturnsChallenge /> */}
+      <MultipleReturnsChallenge />
       {/* <UsingForms /> */}
       {/* <FormsWithFormDataAPI /> */}
       <ComponenWithUseRef />
